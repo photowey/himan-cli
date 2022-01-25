@@ -1,0 +1,36 @@
+{
+  "name": "himan",
+  "version": "1.0.0",
+  "description": "hicoo java backend automation tool",
+  "main": "index.js",
+  "bin": {
+    "himan": "bin/himan.js",
+    "hm": "bin/himan.js",
+    "himan-create": "bin/himan-create.js",
+    "himan-generator": "bin/himan-generator.js"
+  },
+  "scripts": {
+    "test": "hicoo hello"
+  },
+  "keywords": [
+    "hicoo",
+    "java",
+    "backend",
+    "cli"
+  ],
+  "author": "weichangjun",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "archiver": "^5.3.0",
+    "chalk": "^4.0.0",
+    "commander": "^8.3.0",
+    "download-git-repo": "^3.0.2",
+    "freemarker.js": "^1.4.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "node-unzip-2": "^0.2.8",
+    "ora": "^6.0.1"
+  }
+}
