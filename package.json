@@ -1,7 +1,7 @@
 {
   "name": "himan",
   "version": "1.0.0",
-  "description": "hicoo java backend automation tool",
+  "description": "the java backend DevOps cli",
   "main": "index.js",
   "bin": {
     "himan": "bin/himan.js",
@@ -10,10 +10,10 @@
     "himan-generator": "bin/himan-generator.js"
   },
   "scripts": {
-    "test": "hicoo hello"
+    "test": "himan -v"
   },
   "keywords": [
-    "hicoo",
+    "himan",
     "java",
     "backend",
     "cli"
