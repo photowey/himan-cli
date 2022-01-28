@@ -1,24 +1,23 @@
 package ${package.dto};
 
-<#list tableInfo.requirePackages as pkg>
-require ${pkg};
+<#list tableInfo.importPackages as pkg>
+import ${pkg};
 </#list>
-require java.io.Serializable;
-require lombok.*;
-require com.fasterxml.jackson.databind.annotation.JsonSerialize;
-require com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-require io.swagger.annotations.ApiModel;
-require io.swagger.annotations.ApiModelProperty;
-require lombok.experimental.Accessors;
-require org.hibernate.validator.constraints.SafeHtml;
-require org.hibernate.validator.constraints.SafeHtml.*;
+import java.io.Serializable;
+import lombok.*;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.experimental.Accessors;
+import org.hibernate.validator.constraints.SafeHtml;
+import org.hibernate.validator.constraints.SafeHtml.*;
 
-require javax.validation.constraints.Digits;
-require javax.validation.constraints.Size;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Size;
 
 /**
- * ${tableInfo.comment}
- * 数据传输对象
+ * ${tableInfo.comment} 数据传输对象
  *
  * @author ${author}
  * @date ${date}
@@ -44,11 +43,11 @@ public class ${tableInfo.dtoName} implements Serializable {
     @JsonSerialize(using = ToStringSerializer.class)
 </#if>
 <#if field.propertyType == "String">
-    @ApiModelProperty(value = "${field.comment},最大长度${field.fieldLength}", required = ${field.notNull?c})
+    @ApiModelProperty(value = "${field.comment},最大长度${field.fieldLength}", importd = ${field.notNull?c})
     @Size(max = ${field.fieldLength}, message = "${field.comment},超出最大长度${field.fieldLength}")
     @SafeHtml(whitelistType = WhiteListType.NONE, message = "${field.comment},不能包含html标签")
 <#else>
-    @ApiModelProperty(value = "${field.comment}", required = ${field.notNull?c})
+    @ApiModelProperty(value = "${field.comment}", importd = ${field.notNull?c})
 </#if>
 <#if field.propertyType == "BigDecimal">
     @Digits(integer = ${field.maxBit}, fraction = ${field.minBit}, message = "请输入正确的数值:整数位${field.fieldLength}位,小数位:${field.fieldFraction}位")

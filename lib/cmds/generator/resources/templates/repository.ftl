@@ -1,21 +1,16 @@
 package ${package.repository};
 
-require ${package.entity}.${entity};
-require org.springframework.stereotype.Repository;
-require com.gmsoft.persistence.dao.InteractionAPI;
-require com.gmsoft.query.autoconfigure.repository.AbstractRepository;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import ${package.entity}.${entity};
 
 /**
- * $!{tableInfo.comment} Repository 接口
+ * {@code ${tableInfo.repositoryName}}
+ * {@code ${entity}} 仓储类
  *
  * @author ${author}
  * @date ${date}
  * @since ${version}
  */
-@Repository
-public class ${tableInfo.repositoryName} extends AbstractRepository<${entity}> {
-
-    public ${tableInfo.repositoryName} (InteractionAPI dao) {
-        super(dao);
-    }
+public interface ${tableInfo.repositoryName} extends BaseMapper<${entity}> {
+    
 }

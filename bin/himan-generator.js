@@ -16,12 +16,13 @@ const himan = require('../lib/cmds/generator/index.cjs');
 program
     .usage(
         chalk.cyan('\n$ himan generator:\n') +
-        chalk.green('$ himan generator -p <project>\n') +
-        chalk.green('$ himan generator -p himanapp\n') +
+        chalk.green('$ himan generator -p <project> -m <module>\n') +
+        chalk.green('$ himan generator -p himanapp -m payment\n') +
         chalk.red('OR\n') +
-        chalk.green('$ himan create -p himanapp')
+        chalk.green('$ himan create -p himanapp -m payment')
     )
     .option('-p,--project <project>', 'the name of project')
+    .option('-m,--module <module>', 'the name of project module')
     .option('--path <project-path>', 'the path of the will be created project')
     .option('-d,--database <database>', 'the target database for reverse engineering')
 

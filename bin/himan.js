@@ -24,7 +24,8 @@ const {
     PRODUCT_CODES,
     GROUP_ID,
     ARTIFACT_ID,
-    ROOT_VERSION
+    ROOT_VERSION,
+    DATA_BASE
 } = require('../lib/utils/constants');
 
 const {
@@ -76,6 +77,7 @@ function ensureHimanDB() {
         db['rootGroupId'] = GROUP_ID
         db['rootArtifactId'] = ARTIFACT_ID
         db['rootVersion'] = ROOT_VERSION
+        db['database'] = DATA_BASE
         fs.outputFileSync(HIMAN_DB, JSON.stringify(db, "", 4))
     }
 }

@@ -1,9 +1,9 @@
 package ${package.mapper};
 
-require ${package.entity}.${entity};
-require ${package.dto}.${dto};
-require org.springframework.stereotype.Component;
-require com.gmsoft.query.autoconfigure.service.mapper.AbstractEntityMapperAdaptor;
+import ${package.entity}.${entity};
+import ${package.dto}.${dto};
+import org.springframework.stereotype.Component;
+import com.uphicoo.cloud.platform.core.constant.mapper.modelmapper.AbstractEntityMapperAdaptor;
 
 /**
  * ${tableInfo.mapperName}
