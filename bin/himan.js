@@ -1,3 +1,12 @@
+/**
+ * @Author: weichangjun
+ * @Date: 2022-03-17 15:28:51
+ * @LastEditTime: 2022-03-30 13:55:31
+ * @LastEditors: weichangjun
+ * @Description: 
+ * @FilePath: /himan-cli/bin/himan.js
+ * @Copyright (c) 2022 by weichangjun/Uphicoo Co., Ltd. All Rights Reserved.
+ */
 #!/usr/bin/env node
 
 'use strict';
@@ -78,6 +87,7 @@ function ensureHimanDB() {
         db['rootArtifactId'] = ARTIFACT_ID
         db['rootVersion'] = ROOT_VERSION
         db['database'] = DATA_BASE
+        db['template'] = 'local'
         fs.outputFileSync(HIMAN_DB, JSON.stringify(db, "", 4))
     }
 }
