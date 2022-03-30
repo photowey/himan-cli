@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.uphicoo.cloud.platform.core.constant.mapper.modelmapper.AbstractEntityMapperAdaptor;
 
 /**
- * ${tableInfo.mapperName}
+ * {@code ${tableInfo.mapperName}}
  * Mapper for the entity ${entity} and its DTO ${dto}.
  *
  * @author ${author}

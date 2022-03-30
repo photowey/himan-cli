@@ -7,6 +7,7 @@ import ${package.entity}.${entity};
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * {@code ${tableInfo.controllerName}}
  * ${tableInfo.comment} 控制器
  *
  * @author ${author}

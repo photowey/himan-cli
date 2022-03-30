@@ -7,6 +7,7 @@ import ${package.service}.${tableInfo.serviceName};
 import org.springframework.stereotype.Service;
 
 /**
+ * {@code ${tableInfo.serviceImplName}}
  * ${tableInfo.comment} 服务实现类
  *
  * @author ${author}
@@ -14,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since ${version}
  */
 @Service
-public class ${tableInfo.serviceImplName} extends ServiceImpl<${tableInfo.repositoryName}, Hello> implements ${tableInfo.serviceName} {
+public class ${tableInfo.serviceImplName} extends ServiceImpl<${tableInfo.repositoryName}, ${entity}> implements ${tableInfo.serviceName} {
 
 }
